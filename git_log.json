@@ -1,0 +1,27 @@
+{
+	"gitname":"tioj",
+	"gitlog":[
+		{"name":"main",
+			"verson_tree":[
+				{"time":"10-08-2022-14:39",
+					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
+					"do":"git create",
+					"name":"tioj"
+				},
+				{"time":"10-08-2022-14:39",
+					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
+					"do":"files add",
+					"add":[
+						"1001.cpp",
+						"./git_log.json",
+						"basic.cpp"
+					],
+					"remove":[],
+					"edit":[],
+					"other_thing":"",
+					"other_branch":[]
+				}
+			]
+		}
+	]
+}
