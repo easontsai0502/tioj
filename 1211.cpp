@@ -25,7 +25,7 @@ using namespace std;
 /*define type*/
 #define ULLI unsigned long long int
 #define LLI long long int
-#define INT int
+#define INT LLI
 #define UINT unsigned INT
 #define PII pair<INT,INT>
 #define PUIUI pair<UINT,UINT>
