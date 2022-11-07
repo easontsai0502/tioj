@@ -106,8 +106,8 @@ int main(){
 		//假設Moumou先
 		//如果實際是Moumou先開始，其餘正常
 		//如果實際是對方的話，輸贏反向
-		if(winner[0])cout<<"Mimi";
-		else cout<<"Moumou";
+		if(winner[0]==1)cout<<"Mimi"<<endl;
+		else cout<<"Moumou"<<endl;
 		cout<<endl;
 		if(debug){
 			for(INT i=0;i<n;i++){
