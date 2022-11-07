@@ -28,7 +28,7 @@ using namespace std;
 #define what_the_fuck cin.tie(0);cout.tie(0);ios::sync_with_stdio(false)
 #define ULLI unsigned long long int
 #define LLI long long int
-#define INT int
+#define INT LLI
 #define UINT unsigned INT
 #define PII pair<INT,INT>
 #define PUIUI pair<UINT,UINT>
@@ -91,7 +91,7 @@ int main(){
 			for(INT i:backtree[now]){
 				out[i]--;
 				if(winner[now]==0)winner[i]=1;//贏家swap
-				else winner[i]=0;
+				//else winner[i]=0;
 				if(out[i]==0)q.push_back(i);//如果這裡是最後一次通往這，就把他列入代辦清單
 			}
 			if(debug){
