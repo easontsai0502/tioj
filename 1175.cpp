@@ -1,6 +1,6 @@
 /*
-[Q]
-[]
+[Q]https://tioj.ck.tp.edu.tw/problems/1175
+[AC]
 */
 
 /*include*/
