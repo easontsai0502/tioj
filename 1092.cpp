@@ -28,11 +28,15 @@ using namespace std;
 #define what_the_fuck cin.tie(0);cout.tie(0);ios::sync_with_stdio(false)
 #define ULLI unsigned long long int
 #define LLI long long int
-#define INT LLI
+#define INT int
 #define UINT unsigned INT
 #define PII pair<INT,INT>
 #define PUIUI pair<UINT,UINT>
 #define endl "\n"
+#define DBG if(debug)
+#define FIR first
+#define SEC second
+#define elif else if
 #define wassomething() empty()==false
 
 /*struct*/
@@ -58,27 +62,29 @@ INT winner[10000+1];
 /*main*/
 int main(){
 	/*IO加速*/
-	if(!debug&&iofast)what_the_fuck;
+	if(!debug&&iofast){what_the_fuck;}
 	while(cin>>n>>e){
-		if(n==0||e==0)break;
+		if(n==0||e==0)return 0;
 		/*re:0*/
-		for(INT i=0;i<=n;i++){
+		for(INT i=0;i<=n+1;i++){
 			tree[i].clear();
 			backtree[i].clear();
 			out[i]=0;
 			winner[i]=0;
 		}
+		a=b=0;
+		fplay.clear();
 		/*CIN*/
 		for(INT i=0;i<e;i++){
 			cin>>a>>b;
 			a--;
 			b--;
-			tree[a].push_back(b);
 			backtree[b].push_back(a);
 			out[a]++;
 		}
 		cin>>fplay;
 		/*solve*/
+
 		//bfs
 		//拓撲排序
 		deque<INT>q;
@@ -103,12 +109,9 @@ int main(){
 			}
 		}
 		if(fplay=="Mimi")winner[0]^=1;
-		//假設Moumou先
-		//如果實際是Moumou先開始，其餘正常
-		//如果實際是對方的話，輸贏反向
 		if(winner[0]==1)cout<<"Mimi"<<endl;
 		else cout<<"Moumou"<<endl;
-		cout<<endl;
+		//cout<<endl;
 		if(debug){
 			for(INT i=0;i<n;i++){
 				cout<<winner[i]<<" ";
