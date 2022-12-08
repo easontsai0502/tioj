@@ -1,8 +1,8 @@
 /*
 [Q]https://tioj.ck.tp.edu.tw/problems/1092
 [BFS]
-[Topological sorting]
-[WA]
+[Topological sorting][DP]
+[AC]
 */
 
 /*include*/
@@ -20,6 +20,7 @@
 #include<deque>
 #include<map>
 #include<set>
+#include<cstring>
 
 /*using namespace*/
 using namespace std;
@@ -64,13 +65,12 @@ int main(){
 	/*IO加速*/
 	if(!debug&&iofast){what_the_fuck;}
 	while(cin>>n>>e){
-		if(n==0||e==0)return 0;
+		if(n==0&&e==0)return 0;
 		/*re:0*/
+		memset(out,0,sizeof(out));
+		memset(winner,0,sizeof(winner));
 		for(INT i=0;i<=n+1;i++){
-			tree[i].clear();
 			backtree[i].clear();
-			out[i]=0;
-			winner[i]=0;
 		}
 		a=b=0;
 		fplay.clear();
@@ -96,8 +96,7 @@ int main(){
 			q.pop_front();
 			for(INT i:backtree[now]){
 				out[i]--;
-				if(winner[now]==0)winner[i]=1;//贏家swap
-				//else winner[i]=0;
+				if(winner[now]==0)winner[i]=1;//如果now點為必贏，那採i的人必輸
 				if(out[i]==0)q.push_back(i);//如果這裡是最後一次通往這，就把他列入代辦清單
 			}
 			if(debug){
@@ -109,7 +108,7 @@ int main(){
 			}
 		}
 		if(fplay=="Mimi")winner[0]^=1;
-		if(winner[0]==1)cout<<"Mimi"<<endl;
+		if(winner[0])cout<<"Mimi"<<endl;
 		else cout<<"Moumou"<<endl;
 		//cout<<endl;
 		if(debug){
@@ -163,5 +162,5 @@ Mimi
 
 /*think*/
 /*
-
+dp[i]表該人贏or輸
 */
