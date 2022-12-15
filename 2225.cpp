@@ -77,11 +77,25 @@ struct mat{
 PII padd(PII a,PII b){
 	return {a.FIR+b.FIR,a.SEC+b.SEC};
 }
+bool checker(string a,string b){//檢查a是否包含完整的b
+	INT it=b.size()-1;
+	for(INT i=a.size()-1;i>=0;i--){
+		if(a[i]==b[it]){
+			it--;
+		}
+		if(it<=-1)return true;
+	}
+	return false;
+}
 /*main*/
 int main(){
 	if(!debug&&iofast){what_the_fuck;}
 	/*CIN*/
-	INT n;
+	cin>>n;
+	cin>>x;
+	for(INT i=0;i<n;i++){
+		cin>>s[i];
+	}
 	/*solve*/
 	return 0;
 }
