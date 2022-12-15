@@ -136,6 +136,19 @@
 					"other_thing":"",
 					"other_branch":[]
 				},
+				{"time":"12-12-2022-20:54",
+					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
+					"do":"files add",
+					"edit":[
+					],
+					"remove":[],
+					"add":[
+						"./2251.cpp",
+						"./2252.cpp"
+					],
+					"other_thing":"",
+					"other_branch":[]
+				},
 				{"time":"12-14-2022-18:40",
 					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
 					"do":"files add",
@@ -168,19 +181,6 @@
 					"remove":[],
 					"add":[
 						"./2259.cpp"
-					],
-					"other_thing":"",
-					"other_branch":[]
-				},
-				{"time":"12-12-2022-20:54",
-					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
-					"do":"files add",
-					"edit":[
-					],
-					"remove":[],
-					"add":[
-						"./2251.cpp",
-						"./2252.cpp"
 					],
 					"other_thing":"",
 					"other_branch":[]
