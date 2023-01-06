@@ -76,11 +76,23 @@ struct mat{
 PII padd(PII a,PII b){
 	return {a.FIR+b.FIR,a.SEC+b.SEC};
 }
+void ans_dbg(deque<INT> dq){
+	DBG while(dq.wassomething()){
+		cerr<<dq.front()<<" ";
+		dq.pop_front();
+	}
+	cerr<<endl;
+}
 void INT_DFS(INT a){
 	while(tree[a].wassomething()){
 		INT nxt=*tree[a].begin();
 		tree[a].erase(tree[a].find(nxt));
 		tree[nxt].erase(tree[nxt].find(a));
+		DBG cerr<<a<<"=>"<<nxt<<endl;
+		DBG{
+			cerr<<"now:";
+			ans_dbg(ans);
+		}
 		INT_DFS(nxt);
 	}
 	ans.push_front(a);
